@@ -9,8 +9,13 @@ import Users from '../../images/users.svg';
 import bag from '../../images/shopping-bag.svg';
 import Down from '../../images/chevron-down.svg';
 import Vertical from '../../images/more-vertical.svg';
+import Avatar1 from '../../images/avatar1.jpg';
+import Avatar2 from '../../images/avatar2.jpg';
+import Avatar3 from '../../images/avatar3.jpg';
+import Avatar4 from '../../images/avatar4.jpg';
 import Chart  from 'react-apexcharts'
 import { Link } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 
 
 const Analytics = () => {
@@ -677,13 +682,13 @@ const Analytics = () => {
                                 </div>
                                 <div className="row">
                                     <div className="dispatched_orders">
-                                        <div className="dispatched_orders_header p-3 bg-navy rounded-top">
-                                            <h4 className="h4-responsive m-0">Dispatched Orders</h4>
+                                        <div className="dispatched_orders_header pt-3 px-3 pb-1 bg-navy rounded-top">
+                                            <h4 className="h4-responsive pb-3">Dispatched Orders</h4>
                                         </div>
-                                        <div className="dispatched_orders_body px-3">
+                                        <div className="dispatched_orders_body">
                                             <table className="table">
                                                 <thead>
-                                                    <tr>
+                                                    <tr className="bg-navy">
                                                         <th scope="col">ORDER NO.</th>
                                                         <th scope="col">STATUS</th>
                                                         <th scope="col">OPERATORS</th>
@@ -694,22 +699,95 @@ const Analytics = () => {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>Mark</td>
-                                                        <td>Otto</td>
-                                                        <td>@mdo</td>
+                                                    <tr className="bg-navy">
+                                                        <th scope="row">#879985</th>
+                                                        <td><div className="rounded-circle circle_dot bg-green"></div>Moving</td>
+                                                        <td>
+                                                            <ul className="list-unstyled list-inline">
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar1} alt={Avatar1} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar2} alt={Avatar2} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar3} alt={Avatar3} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar4} alt={Avatar4} /></li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>Anniston, Alabama</td>
+                                                        <td>
+                                                            <span>
+                                                                <span>130 km</span>
+                                                                <div class="progress progress_bar_green" style={{height: '5px'}}>
+                                                                    <div class="progress-bar rounded" role="progressbar" style={{width: '80%', height: '5px'}} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </span>
+                                                        </td>
+                                                        <td>26/07/2018</td>
+                                                        <td>28/07/2018</td>
                                                     </tr>
-                                                    <tr>
-                                                        <th scope="row">2</th>
-                                                        <td>Jacob</td>
-                                                        <td>Thornton</td>
-                                                        <td>@fat</td>
+                                                    <tr className="bg-navy">
+                                                        <th scope="row">#156897</th>
+                                                        <td><div className="rounded-circle circle_dot bg-yellow"></div>Pending</td>
+                                                        <td>
+                                                            <ul className="list-unstyled list-inline">
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar1} alt={Avatar1} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar2} alt={Avatar2} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar3} alt={Avatar3} /></li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>Cordova, Alaska</td>
+                                                        <td>
+                                                            <span>
+                                                                <span>234 km</span>
+                                                                <div className="progress progress_bar_yellow" style={{height: '5px'}}>
+                                                                    <div className="progress-bar" role="progressbar" style={{width: '60%', height: '5px'}} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </span>
+                                                        </td>
+                                                        <td>26/07/2018</td>
+                                                        <td>28/07/2018</td>
                                                     </tr>
-                                                    <tr>
-                                                        <th scope="row">3</th>
-                                                        <td colspan="2">Larry the Bird</td>
-                                                        <td>@twitter</td>
+                                                    <tr className="bg-navy">
+                                                        <th scope="row">#568975</th>
+                                                        <td><div className="rounded-circle circle_dot bg-green"></div>Moving</td>
+                                                        <td>
+                                                            <ul className="list-unstyled list-inline">
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar1} alt={Avatar1} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar2} alt={Avatar2} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar3} alt={Avatar3} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar4} alt={Avatar4} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar4} alt={Avatar4} /></li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>Florence, Alabama</td>
+                                                        <td>
+                                                            <span>
+                                                                <span>168 km</span>
+                                                                <div className="progress progress_bar_green" style={{height: '5px'}}>
+                                                                    <div className="progress-bar" role="progressbar" style={{width: '70%', height: '5px'}} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </span>
+                                                        </td>
+                                                        <td>26/07/2018</td>
+                                                        <td>28/07/2018</td>
+                                                    </tr>
+                                                    <tr className="bg-navy">
+                                                        <th scope="row">#245689</th>
+                                                        <td><div className="rounded-circle circle_dot bg-red"></div>Canceled</td>
+                                                        <td>
+                                                            <ul className="list-unstyled list-inline">
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar1} alt={Avatar1} /></li>
+                                                                <li className="list-inline-item"><img className="border border-white rounded-circle" src={Avatar2} alt={Avatar2} /></li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>Clifton, Arizona</td>
+                                                        <td>
+                                                            <span>
+                                                                <span>125 km</span>
+                                                                <div className="progress progress_bar_red" style={{height: '5px'}}>
+                                                                    <div className="progress-bar rounded" role="progressbar" style={{width: '70%', height: '5px'}} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </span>
+                                                        </td>
+                                                        <td>26/07/2018</td>
+                                                        <td>28/07/2018</td>
                                                     </tr>
                                                 </tbody>
                                             </table>

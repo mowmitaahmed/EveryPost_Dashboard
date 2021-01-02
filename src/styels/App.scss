@@ -29,3 +29,20 @@ body{
 .bg-input{
   background: $bg_input;
 }
+.bg-green{
+  background: $green_color;
+}
+.bg-yellow{
+  background: $yellow_color;
+}
+.bg-red{
+  background: $red_color;
+}
+
+.circle_dot{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}

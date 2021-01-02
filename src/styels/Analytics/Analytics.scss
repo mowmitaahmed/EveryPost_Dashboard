@@ -430,9 +430,103 @@
         font-size: 18px;
         line-height: 22px;
         color: #ebeefd;
+        border-bottom: 1px solid $light_gray;
        }
     }
     .dispatched_orders_body{
-
+        table{
+            thead{
+                tr{
+                   th{
+                       padding: 20px 15px;
+                       font-weight: 700;
+                       color: $light_gray;
+                       font-size: 12px;
+                       line-height: 18px;
+                   }
+                }
+            }
+            tbody{
+                tr{    
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
+                    th, td{
+                        padding: 10px 15px;
+                        font-weight: 400;
+                        color: $light_gray;
+                        font-size: 14px;
+                        line-height: 21px;
+                        ul{
+                            li{
+                                margin: -.25rem!important;
+                                -webkit-transition: .3s;
+                                img{
+                                    width: 30px;
+                                    height: 30px;
+                                    border: 2px solid white;
+                                    cursor: pointer;
+                                }
+                            }
+                            li:hover{
+                                transform: translateY(-5px) scale(1.07);
+                                box-shadow: 0 14px 24px rgba(62,57,107,.2);
+                                z-index: 999;
+                            }
+                        }
+                        .progress_bar_green{
+                            background: #12283F;
+                            .progress-bar{
+                                background: #28C76F;
+                            }
+                        }
+                        .progress_bar_red{
+                            background: #261C3C;
+                            .progress-bar{
+                                background: #EA5455;
+                            }
+                        }
+                        .progress_bar_yellow{
+                            background: #28243B;
+                            .progress-bar{
+                                background: #FF9F43;
+                            }
+                        }
+                    }
+                }
+                tr:hover{    
+                    z-index: 200;
+                    -webkit-transform: translateY(-4px);
+                    transform: translateY(-4px);
+                }
+            }
+        }
     }
 }
+
+// Tooltip
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
