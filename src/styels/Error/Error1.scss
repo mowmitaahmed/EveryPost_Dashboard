@@ -1,0 +1,24 @@
+@import '../mixin.scss';
+@import '../variables.scss';
+.error1_area{
+    background-image: url(../../images/Error/Error1.jpg);
+    background-position: 50%;
+    background-size: cover;
+    min-height: 100vh;
+    color: #3f4254;
+
+    .error1_details{
+       min-height: 100vh;
+       
+       h1{
+           font-weight: 700;
+           font-size: 150px;
+           line-height: 180px;
+       }
+       p{
+           font-weight: 300;
+           font-size: 20px;
+           line-height: 29px;
+       }
+    }
+}

@@ -1,0 +1,17 @@
+@import './mixin.scss';
+@import './variables.scss';
+.header_area{
+    background: $bg_navy;
+    position: fixed;
+    width: 79%;
+    top: 25px;
+    right: 25px;
+    color: $light_gray;
+    z-index: 999999999999999999999999999999;
+}
+.navbar ul li a{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: $light_gray!important;
+}

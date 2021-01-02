@@ -1,0 +1,31 @@
+@import './mixin.scss';
+@import './variables.scss';
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.text-purple{
+  color: $purple_color;
+}
+.text-gray{
+  color: $light_gray;
+}
+.text-red{
+  color: $red_color;
+}
+.text-yellow{
+  color: $yellow_color;
+}
+
+.bg-purple{
+  background: $purple_color;
+}
+
+.bg-navy{
+  background: $bg_navy;
+}
+.bg-input{
+  background: $bg_input;
+}
