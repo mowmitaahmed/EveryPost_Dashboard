@@ -1,0 +1,93 @@
+@import './mixin.scss';
+@import './variables.scss';
+// User View Top
+.user_view_top{
+    .user_view_card{
+        .user_view_card_header{
+            h2{
+               font-weight: 500;
+               font-size: 18px;
+               line-height: 27px;
+            }
+        }
+        .user_view_card_body{
+            img{
+                width: 112px;
+                height: 112px;
+            }
+            .user_view_top_table{
+                table{
+                    tbody{
+                        tr{
+                            color: $light_gray;
+                            font-size: 14px;
+                            line-height: 20px;
+                            th{
+                               font-weight: 700;
+                               padding: .50rem;
+                            }
+                            td{
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .user_view_card_footer{
+            button{
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 400;
+                transition: all ease-in-out 0.3ms;
+                padding-top: calc(.9rem - 1px);
+                padding-bottom: calc(.9rem - 1px);
+            }
+            button:focus{
+                outline: 0;
+                box-shadow: 0 0 0 0rem rgba(13,110,253,.25);
+            }
+            button.text-purple:hover{
+                color: $purple_color;
+                background: #181C48;
+            }
+            button.text-purple:active, button.text-purple:focus{
+                color: #ffffff;
+                background: $purple_color;
+            }
+            button.text-red:hover{
+                color: $red_color;
+                background: #221A3B;
+            }
+            button.text-red:active, button.text-red:focus{
+                color: #ffffff;
+                background: $red_color;
+            }
+        }
+    }
+}
+
+// User View Information and Social
+.user_view_information, .user_view_social{
+    h2{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    table{
+        color: $light_gray;
+        font-size: 14px;
+        line-height: 20px;
+        tbody{
+            tr{
+                th{
+                  font-weight: 700;
+                  padding-left: 0px!important;
+                }
+                td{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

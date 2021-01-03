@@ -3,9 +3,10 @@
 
 .sidebar_area{
     background: $bg_navy;
-    min-height:100vh;
+    height:auto;
     position: fixed;
     left: 0;
+    overflow-y: scroll;
 }
 .analytics_area{
     background: $bg_dashboard;

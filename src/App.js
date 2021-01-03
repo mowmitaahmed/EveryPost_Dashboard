@@ -9,6 +9,7 @@ import Error1 from './Components/Pages/Error/Error1/Error1';
 import Login from './Components/Shared/Login/Login';
 import Analytics from './Components/Analytics/Analytics';
 import UserEdit from './Components/User/UserEdit';
+import UserView from './Components/User/UserView';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/useredit">
              <UserEdit />
+          </Route>
+          <Route path="/userview">
+            <UserView />
           </Route>
           <Route path="/login">
             <Login />
