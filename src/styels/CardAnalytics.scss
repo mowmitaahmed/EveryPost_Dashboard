@@ -1,0 +1,152 @@
+@import './mixin.scss';
+@import './variables.scss';
+
+// Single Analytics
+.single_analytics{
+    border-radius: .5rem;
+    h1{
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+        color: #ebeefd; 
+    }
+    h4{
+       font-weight: 500;
+       font-size: 18px;
+       line-height: 27px;
+    }
+    h6{
+        span{
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+    h5{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;  
+    }
+    .single_analytics_header{
+        i{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    button{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 17px;
+        i{
+            font-size: 12px;
+            line-height: 17px;
+            color: $light_gray;
+        }
+    }
+    button:hover{
+        color: $light_gray;
+    }
+    button:focus, button:active{
+        outline: 0;
+        box-shadow: 0 0 0 0rem rgba(13,110,253,.25);
+    }
+}
+.single_analytics_info{
+    button{
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}
+.analytics-list{
+    li{
+        transition: all 0.3 ease;
+        border-radius: 0px solid;
+        border-color: #414561!important;
+    }
+    li:hover{
+        background-color: #262c49;
+        border-color: #414561!important;
+    }
+    li:hover .float-end{
+        display: block;
+    }
+    .float-end{
+        display: none;
+        transition: all 0.3 ease;
+    }
+    i{
+        color: $purple_color!important;
+        font-size: 10px;
+        line-height: 10px;
+    }
+    button{
+        transition: all 0.3 ease-in-out;
+    }
+    button:hover{
+        background: $hover_purple;
+        ;
+    }
+}
+.progress_bar_purple{
+    background: #1A1E4D;
+    .progress-bar{
+        background: #7367f0;
+    }
+}
+.progress_bar_green{
+    background: #12283F;
+    .progress-bar{
+        background: #28C76F;
+    }
+}
+.progress_bar_yellow{
+    background: #28243B;
+    .progress-bar{
+        background: #FF9F43;
+    }
+}
+
+element.style {
+}
+.analytics-list li:hover {
+    background-color: #262c49;
+    border-color: #414561 !important;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: initial!important;
+    border-bottom-left-radius: initial!important;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: initial!important;
+    border-top-right-radius: initial!important;
+}
+.single_analytics_footer{
+    .analytics_footer_progress_bar{
+        small{
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+}
+.single_analytics_body{
+    small{
+        font-size: 12px;
+        line-height: 17px;
+    }
+    button{
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+.browser-info{
+    h4{
+        color: #ebeefd;
+    }
+}

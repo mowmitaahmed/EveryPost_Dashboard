@@ -14,8 +14,13 @@ import SiteTraffics from '../Charts/SiteTraffics';
 import ActiveUsers from '../Charts/ActiveUsers';
 import Newsletter from '../Charts/Newsletter';
 import Footer from '../Shared/Footer/Footer';
+import Breadcumbs from '../Shared/Breadcumbs';
 
 const CardStatistics = () => {
+    const breadcumbs = {
+        title: 'Statistics Cards',
+        page: 'Card'
+    }
     return (
         <section>
             <div className="container-fluid">
@@ -27,21 +32,7 @@ const CardStatistics = () => {
                         <Header />
                         <div className="content_area">
                             <div className="container">
-                                <div className="row user_edit_header">
-                                    <div className="col-md-12">
-                                        <div className="user_edit_header_left float-start d-flex py-2">
-                                            <h2 className="h2-responsive pe-3 me-3">Statistics Cards</h2>
-                                            <ul className="list-unstyled list-inline">
-                                                <li className="list-inline-item"><Link to="/" className="text-decoration-none"><img src={PurpleHome} alt={PurpleHome} /></Link><img className="ms-2" src={RightArrows} alt={RightArrows} /></li>
-                                                <li className="list-inline-item text-purple">Card<img className="ms-2" src={RightArrows} alt={RightArrows} /></li>
-                                                <li className="list-inline-item text-gray">Statistics Cards</li>
-                                            </ul>
-                                        </div>
-                                        <div className="user_edit_header_left float-end">
-                                            <button className="btn bg-purple rounded-circle"><img src={Settings} alt={Settings}/></button>
-                                        </div>
-                                    </div>
-                                </div>
+                                <Breadcumbs breadcumb={breadcumbs} />
                                 <div className="row">
                                     <div className="col-sm-6 col-lg-4 col-xl-2 col-md-2 mb-4">
                                         <div className="single_statistics bg-navy p-3 text-center">

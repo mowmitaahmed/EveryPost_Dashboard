@@ -136,3 +136,56 @@ button:focus, button:active{
 .quarterly_sales_chart .apexcharts-tooltip-marker {
   background: #EA5455!important;
 }
+
+.show>.dropdown-menu {
+  display: block;
+  position: absolute;
+}
+
+// Single Dropdown
+.avg_session_dropdown{
+  ul{
+    right:0;
+  }
+}
+.single_dropdown{
+  position: relative;
+  ul{
+    position: absolute;
+    background: #262C49; 
+    // transition: all 0.3s ease;   
+    border: 1px solid rgba(0,0,0,.05);
+    border-radius: 5px;
+    // transform: scaleY(0);
+    box-shadow: 0 5px 25px rgba(0,0,0,.1);
+    padding: 8px 0;
+    z-index: 99999999;
+    li{
+     color: $light_gray;
+     cursor: pointer;
+     font-weight: 400;
+     font-size: 13px;
+     line-height: 19px;
+     padding: .4rem .7rem;
+    }
+    li:hover{
+      color: $purple_color;
+    }
+  }
+  ul::before{
+    right: .6rem;
+    left: auto;
+    background: #262c49;
+    transform: rotate(45deg) translate(-7px);
+    border-left: 1px solid rgba(0,0,0,.1);
+    border-top: 1px solid rgba(0,0,0,.1);
+    content: "";
+    position: absolute;
+    top: -1px;
+    width: .75rem;
+    height: .75rem;
+    display: block;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+}

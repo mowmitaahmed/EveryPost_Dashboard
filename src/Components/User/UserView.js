@@ -8,8 +8,13 @@ import Settings from '../../images/settings.svg';
 import PurpleHome from '../../images/PurpleHome.svg';
 import { Link } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
+import Breadcumbs from '../Shared/Breadcumbs';
 
 const UserView = () => {
+    const breadcumbs = {
+        title: 'User View',
+        page: 'User'
+    }
     return (
         <section>
             <div className="container-fluid">
@@ -21,21 +26,7 @@ const UserView = () => {
                         <Header />
                         <div className="content_area">
                             <div className="container">
-                                 <div className="row user_edit_header">
-                                     <div className="col-md-12">
-                                         <div className="user_edit_header_left float-start d-flex py-2">
-                                             <h2 className="h2-responsive pe-3 me-3">User View</h2>
-                                             <ul className="list-unstyled list-inline">
-                                                 <li className="list-inline-item"><Link to="/" className="text-decoration-none"><img src={PurpleHome} alt={PurpleHome} /></Link><img className="ms-2" src={RightArrows} alt={RightArrows} /></li>
-                                                 <li className="list-inline-item text-purple">User<img className="ms-2" src={RightArrows} alt={RightArrows} /></li>
-                                                 <li className="list-inline-item text-gray">View</li>
-                                             </ul>
-                                         </div>
-                                         <div className="user_edit_header_left float-end">
-                                             <button className="btn bg-purple rounded-circle"><img src={Settings} alt={Settings}/></button>
-                                         </div>
-                                     </div>
-                                 </div>
+                                <Breadcumbs breadcumb={breadcumbs} />  
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="user_view_top bg-navy rounded px-4 py-4">

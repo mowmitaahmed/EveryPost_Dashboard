@@ -35,7 +35,7 @@ const Sidebar = () => {
                     <ul className="list-unstyled mt-2 dropdown-container">
                         <li className="py-1"><NavLink to="/cardbasic" className="text-decoration-none" ><img className="me-2" src={Circle} alt={Circle} />Basic</NavLink></li>
                         <li className="py-1"><NavLink to="/cardstatistics" className="text-decoration-none" ><img className="me-2" src={Circle} alt={Circle} />Statistics</NavLink></li>
-                        <li className="py-1"><NavLink to="/useredit" className="text-decoration-none w-100" ><img className="me-2" src={Circle} alt={Circle} />Analytics</NavLink></li>
+                        <li className="py-1"><NavLink to="/cardanalytics" className="text-decoration-none w-100" ><img className="me-2" src={Circle} alt={Circle} />Analytics</NavLink></li>
                         <li className="py-1"><NavLink to="/cardactions" className="text-decoration-none w-100" ><img className="me-2" src={Circle} alt={Circle} />Card Actions</NavLink></li>
                     </ul>
                     </li>
