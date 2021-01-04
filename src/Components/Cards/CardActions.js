@@ -6,6 +6,7 @@ import RightArrows from '../../images/chevrons-right.svg';
 import Settings from '../../images/settings.svg';
 import PurpleHome from '../../images/PurpleHome.svg';
 import { Link } from 'react-router-dom';
+import Footer from '../Shared/Footer/Footer';
 
 const CardActions = () => {
     return (
@@ -124,6 +125,7 @@ const CardActions = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <Footer />
                             </div>
                         </div>
                     </div>

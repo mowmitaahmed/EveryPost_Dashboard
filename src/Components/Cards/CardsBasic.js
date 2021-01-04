@@ -16,6 +16,7 @@ import BgBasic2 from '../../images/cards/bgBasic2.jpg';
 import basic10 from '../../images/cards/basic10.jpg';
 import Chat1 from '../../images/cards/chat1.jpg';
 import Chat2 from '../../images/cards/chat2.jpg';
+import Footer from '../Shared/Footer/Footer';
 
 const CardsBasic = () => {
     return (
@@ -457,6 +458,7 @@ const CardsBasic = () => {
                                         </div>
                                     </div>
                                  </div>
+                                <Footer />
                             </div>
                         </div>
                     </div>

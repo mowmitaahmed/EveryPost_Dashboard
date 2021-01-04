@@ -10,6 +10,7 @@ import '../../styels/UserEdit.scss';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Select from 'react-select';
+import Footer from '../Shared/Footer/Footer';
 
 
 const UserEdit = () => {
@@ -290,11 +291,7 @@ const UserEdit = () => {
                                          </div>
                                      </div>
                                  </div>
-                                 <footer className="row user_edit_footer">
-                                    <div className="col-md-12">
-                                        <p><span>COPYRIGHT ©</span><span>2021 </span><Link className="text-decoration-none text-purple" to="https://1.envato.market/vuexy_admin" target="_blank" rel="nofollow">Pixinvent</Link><span class="hidden sm:inline-block">, All rights Reserved</span></p>
-                                    </div>
-                                 </footer>
+                                <Footer />
                             </div>
                         </div>
                     </div>

@@ -12,6 +12,7 @@ import UserEdit from './Components/User/UserEdit';
 import UserView from './Components/User/UserView';
 import CardsBasic from './Components/Cards/CardsBasic';
 import CardActions from './Components/Cards/CardActions';
+import CardStatistics from './Components/Cards/CardStatistics';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/cardactions">
             <CardActions />
+          </Route>
+          <Route path="/cardstatistics">
+            <CardStatistics />
           </Route>
           <Route path="/login">
             <Login />

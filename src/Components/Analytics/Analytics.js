@@ -15,108 +15,13 @@ import Avatar3 from '../../images/avatar3.jpg';
 import Avatar4 from '../../images/avatar4.jpg';
 import Chart  from 'react-apexcharts'
 import { Link } from 'react-router-dom';
-import ReactTooltip from 'react-tooltip';
+import SubscribersGained from '../Charts/SubscribersGained';
+import OrdersRecieved from '../Charts/OrdersRecieved';
+import Footer from '../Shared/Footer/Footer';
+// import ReactTooltip from 'react-tooltip';
 
 
 const Analytics = () => {
-    const subscribers=  [{
-        name: 'Subscribers',
-        data: [28, 40, 36, 52, 38, 60, 55]
-      }]
-    const orders=  [{
-          name: 'Orders',
-          data: [10, 15, 8, 15, 7, 12, 8]
-        }]
-    const orderOptions = {
-        chart: {
-          height: '120px',
-          type: 'area',
-          width: '100%',
-          toolbar: {
-              show: false
-          },
-          sparkline: {
-            enabled: true
-         }
-        },
-        dataLabels: {
-          enabled: false,
-          style: {
-            colors: ['#F44336', '#E91E63', '#9C27B0']
-          }
-        },
-        stroke: {
-          curve: 'smooth'
-        },
-        yaxis: {
-          show: false,
-          labels:{
-              show: false
-          },
-          axisBorder:{
-            show: false
-          },
-          axisTicks: {
-              show: false
-          },
-          tooltip:{
-              enabled: false
-          }
-        },
-        grid: {
-            show: false,
-            xaxis: {
-                lines: {
-                    show: false
-                }
-            },   
-            yaxis: {
-                lines: {
-                    show: false
-                },
-                tooltip:{
-                    enabled: false
-                }
-            } 
-        },
-        xaxis: {
-            labels: {
-                show: false
-            },
-            axisBorder: {
-                show: false
-            },
-            axisTicks:{
-                show: false
-            },
-            tooltip:{
-                enabled: false
-            }
-        },
-        tooltip: {
-        //   x: {
-        //     format: 'dd/MM/yy HH:mm'
-        //   },
-        },
-        fill: {
-            colors: ['#292D5A', '#7367f0', '#7367f0'],
-            type: 'gradient',
-  gradient: {
-    shade: 'dark',
-    type: "vertical",
-    shadeIntensity: 0.5,
-    gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
-    inverseColors: true,
-    opacityFrom: 1,
-    opacityTo: 1,
-    stops: [0, 50, 100],
-    colorStops: []
-  }
-          },
-        markers: {
-            colors: ['#7367f0', '#7367f0', '#9C27B0']
-         }
-      }
 
     // Avg Session
     const avgSessions = [{
@@ -422,7 +327,7 @@ const Analytics = () => {
                                                 <p>Subscribers Gained</p>
                                             </div>
                                             <div className="subscribar_chart">
-                                                <Chart className="rounded-bottom" options={orderOptions} series={subscribers} type="area" width={'100%'} height={'110px'}/>
+                                                <SubscribersGained />
                                             </div>
                                         </div>
                                     </div>
@@ -435,8 +340,8 @@ const Analytics = () => {
                                                 <h2 className="h2-responsive mt-3 mb-2">97.5K</h2>
                                                 <p>Orders Received</p>
                                             </div>
-                                            <div className="subscribar_chart">
-                                                <Chart className="rounded-bottom" options={orderOptions} series={orders} type="area" width={'100%'} height={'110px'}/>
+                                            <div className="subscribar_chart orders_recieved_chart">
+                                                <OrdersRecieved />
                                             </div>
                                         </div>
                                     </div>
@@ -794,12 +699,7 @@ const Analytics = () => {
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <footer className="row user_edit_footer">
-                                    <div className="col-md-12">
-                                        <p><span>COPYRIGHT ©</span><span>2021 </span><Link className="text-decoration-none text-purple" to="https://1.envato.market/vuexy_admin" target="_blank" rel="nofollow">Pixinvent</Link><span class="hidden sm:inline-block">, All rights Reserved</span></p>
-                                    </div>
-                                 </footer>
+                                <Footer />
                             </div>
                         </div>
                     </div>

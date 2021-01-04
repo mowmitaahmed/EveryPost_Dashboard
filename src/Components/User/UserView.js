@@ -7,6 +7,7 @@ import RightArrows from '../../images/chevrons-right.svg';
 import Settings from '../../images/settings.svg';
 import PurpleHome from '../../images/PurpleHome.svg';
 import { Link } from 'react-router-dom';
+import Footer from '../Shared/Footer/Footer';
 
 const UserView = () => {
     return (
@@ -206,11 +207,7 @@ const UserView = () => {
                                         </div>
                                     </div>
                                 </div>
-                                 <footer className="row user_edit_footer pt-3">
-                                    <div className="col-md-12">
-                                        <p><span>COPYRIGHT ©</span><span>2021 </span><Link className="text-decoration-none text-purple" to="https://1.envato.market/vuexy_admin" target="_blank" rel="nofollow">Pixinvent</Link><span class="hidden sm:inline-block">, All rights Reserved</span></p>
-                                    </div>
-                                 </footer>
+                                <Footer />
                             </div>
                         </div>
                     </div>
