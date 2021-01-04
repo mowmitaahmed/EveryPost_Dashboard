@@ -10,6 +10,8 @@ import Login from './Components/Shared/Login/Login';
 import Analytics from './Components/Analytics/Analytics';
 import UserEdit from './Components/User/UserEdit';
 import UserView from './Components/User/UserView';
+import CardsBasic from './Components/Cards/CardsBasic';
+import CardActions from './Components/Cards/CardActions';
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
           </Route>
           <Route path="/userview">
             <UserView />
+          </Route>
+          <Route path="/cardbasic">
+            <CardsBasic />
+          </Route>
+          <Route path="/cardactions">
+            <CardActions />
           </Route>
           <Route path="/login">
             <Login />
