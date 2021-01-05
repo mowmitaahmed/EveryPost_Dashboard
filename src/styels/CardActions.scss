@@ -1,0 +1,58 @@
+@import './mixin.scss';
+@import './variables.scss';
+
+.card_actions_area{
+    h2{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    i{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+.card_actions_body{
+    table{
+        border: 1px solid #414561;
+        background-color: #212744;
+        thead{
+           tr{
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 17px;
+            color: $light_gray;
+               th{
+                border: 1px solid #414561;
+                padding: 1rem;
+               }
+           }
+        }
+        tbody{
+           tr{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $light_gray;
+               th{
+                color: #c2c6dc;
+                border: 1px solid #414561;
+                padding: 1rem;
+               }
+               td{
+                border: 1px solid #414561;
+                color: #c2c6dc;
+                padding: 1rem;
+               }
+           }
+        }
+    }
+}
+.collapsible_body, .refresh_body, .remove_card_body, .all_actions_body{
+    p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: $light_gray;
+    }
+}

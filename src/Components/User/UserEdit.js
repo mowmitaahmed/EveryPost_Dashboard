@@ -10,9 +10,15 @@ import '../../styels/UserEdit.scss';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Select from 'react-select';
+import Footer from '../Shared/Footer/Footer';
+import Breadcumbs from '../Shared/Breadcumbs';
 
 
 const UserEdit = () => {
+    const breadcumbs = {
+        title: 'User Edit',
+        page: 'User'
+    }
     const [selectedOption, setSelectedOption] = useState(null);
     const [startDate, setStartDate] = useState(new Date());
     const options = [
@@ -35,21 +41,7 @@ const UserEdit = () => {
                         <Header />
                         <div className="content_area">
                             <div className="container">
-                                 <div className="row user_edit_header">
-                                     <div className="col-md-12">
-                                         <div className="user_edit_header_left float-start d-flex py-2">
-                                             <h2 className="h2-responsive pe-3 me-3">User Edit</h2>
-                                             <ul className="list-unstyled list-inline">
-                                                 <li className="list-inline-item"><Link to="/" className="text-decoration-none"><img src={PurpleHome} alt={PurpleHome} /></Link><img className="ms-2" src={RightArrows} alt={RightArrows} /></li>
-                                                 <li className="list-inline-item text-purple">User<img className="ms-2" src={RightArrows} alt={RightArrows} /></li>
-                                                 <li className="list-inline-item text-gray">Edit</li>
-                                             </ul>
-                                         </div>
-                                         <div className="user_edit_header_left float-end">
-                                             <button className="btn bg-purple rounded-circle"><img src={Settings} alt={Settings}/></button>
-                                         </div>
-                                     </div>
-                                 </div>
+                                <Breadcumbs breadcumb={breadcumbs} />
                                  <div className="row user_edit_body mb-5">
                                      <div className="col-md-12">
                                          <div className="user_edit_main_area bg-navy rounded p-4">
@@ -290,11 +282,7 @@ const UserEdit = () => {
                                          </div>
                                      </div>
                                  </div>
-                                 <footer className="row user_edit_footer">
-                                    <div className="col-md-12">
-                                        <p><span>COPYRIGHT ©</span><span>2021 </span><Link className="text-decoration-none text-purple" to="https://1.envato.market/vuexy_admin" target="_blank" rel="nofollow">Pixinvent</Link><span class="hidden sm:inline-block">, All rights Reserved</span></p>
-                                    </div>
-                                 </footer>
+                                <Footer />
                             </div>
                         </div>
                     </div>

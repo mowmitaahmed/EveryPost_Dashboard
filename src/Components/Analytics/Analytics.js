@@ -15,197 +15,15 @@ import Avatar3 from '../../images/avatar3.jpg';
 import Avatar4 from '../../images/avatar4.jpg';
 import Chart  from 'react-apexcharts'
 import { Link } from 'react-router-dom';
-import ReactTooltip from 'react-tooltip';
+import SubscribersGained from '../Charts/SubscribersGained';
+import OrdersRecieved from '../Charts/OrdersRecieved';
+import Footer from '../Shared/Footer/Footer';
+import AvgSessions from '../Charts/AvgSessions';
+import AvgSessionsBlock from '../Blocks/AvgSessionsBlock';
+// import ReactTooltip from 'react-tooltip';
 
 
 const Analytics = () => {
-    const subscribers=  [{
-        name: 'Subscribers',
-        data: [28, 40, 36, 52, 38, 60, 55]
-      }]
-    const orders=  [{
-          name: 'Orders',
-          data: [10, 15, 8, 15, 7, 12, 8]
-        }]
-    const orderOptions = {
-        chart: {
-          height: '120px',
-          type: 'area',
-          width: '100%',
-          toolbar: {
-              show: false
-          },
-          sparkline: {
-            enabled: true
-         }
-        },
-        dataLabels: {
-          enabled: false,
-          style: {
-            colors: ['#F44336', '#E91E63', '#9C27B0']
-          }
-        },
-        stroke: {
-          curve: 'smooth'
-        },
-        yaxis: {
-          show: false,
-          labels:{
-              show: false
-          },
-          axisBorder:{
-            show: false
-          },
-          axisTicks: {
-              show: false
-          },
-          tooltip:{
-              enabled: false
-          }
-        },
-        grid: {
-            show: false,
-            xaxis: {
-                lines: {
-                    show: false
-                }
-            },   
-            yaxis: {
-                lines: {
-                    show: false
-                },
-                tooltip:{
-                    enabled: false
-                }
-            } 
-        },
-        xaxis: {
-            labels: {
-                show: false
-            },
-            axisBorder: {
-                show: false
-            },
-            axisTicks:{
-                show: false
-            },
-            tooltip:{
-                enabled: false
-            }
-        },
-        tooltip: {
-        //   x: {
-        //     format: 'dd/MM/yy HH:mm'
-        //   },
-        },
-        fill: {
-            colors: ['#292D5A', '#7367f0', '#7367f0'],
-            type: 'gradient',
-  gradient: {
-    shade: 'dark',
-    type: "vertical",
-    shadeIntensity: 0.5,
-    gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
-    inverseColors: true,
-    opacityFrom: 1,
-    opacityTo: 1,
-    stops: [0, 50, 100],
-    colorStops: []
-  }
-          },
-        markers: {
-            colors: ['#7367f0', '#7367f0', '#9C27B0']
-         }
-      }
-
-    // Avg Session
-    const avgSessions = [{
-        name: 'Sessions',
-        data: [75, 125, 225, 175, 125, 75, 25]
-      }]
-      const avgOptions = {
-        chart: {
-          height: '100%',
-          width: '100%',
-          type: 'bar',
-          toolbar: {
-              show: false
-          },
-          sparkline: {
-            enabled: true
-         }
-        },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded'
-          },
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          show: true,
-          width: 2,
-          colors: ['transparent']
-        },
-        grid: {
-            show: false,
-            xaxis: {
-                lines: {
-                    show: false
-                }
-            },   
-            yaxis: {
-                lines: {
-                    show: false
-                },
-                tooltip:{
-                    enabled: false
-                }
-            } 
-        },
-        xaxis: {
-            labels: {
-                show: false
-            },
-            axisBorder: {
-                show: false
-            },
-            axisTicks:{
-                show: false
-            },
-            tooltip:{
-                enabled: false
-            }
-        },
-        yaxis: {
-          show: false,
-          labels:{
-              show: false
-          },
-          axisBorder:{
-            show: false
-          },
-          axisTicks: {
-              show: false
-          },
-          tooltip:{
-              enabled: false
-          }
-        },
-        fill: {
-          opacity: 1
-        },
-        tooltip: {
-          y: {
-            formatter: function (val) {
-              return "$ " + val + " thousands"
-            }
-          }
-        }
-      }
 
     // Support Taker Chart
     const support = [83];
@@ -422,7 +240,7 @@ const Analytics = () => {
                                                 <p>Subscribers Gained</p>
                                             </div>
                                             <div className="subscribar_chart">
-                                                <Chart className="rounded-bottom" options={orderOptions} series={subscribers} type="area" width={'100%'} height={'110px'}/>
+                                                <SubscribersGained />
                                             </div>
                                         </div>
                                     </div>
@@ -435,70 +253,14 @@ const Analytics = () => {
                                                 <h2 className="h2-responsive mt-3 mb-2">97.5K</h2>
                                                 <p>Orders Received</p>
                                             </div>
-                                            <div className="subscribar_chart">
-                                                <Chart className="rounded-bottom" options={orderOptions} series={orders} type="area" width={'100%'} height={'110px'}/>
+                                            <div className="subscribar_chart orders_recieved_chart">
+                                                <OrdersRecieved />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="col-md-6 col-sm-12 col-xs-12 mb-4">
-                                        <div className="avg_sessions rounded p-4">
-                                            <div className="row">
-                                                <div className="col-md-6 col-sm-12 col-xs-12 d-flex align-content-between flex-wrap">
-                                                    <div className="avg_session_details">
-                                                        <h2 className="h2-responsive mb-1">2.7k</h2>
-                                                        <h6 className="h6-responsive">Avg Sessions</h6>
-                                                        <p className="p-responsive"><span>+5.2</span> vs Last 7 Days</p>
-                                                    </div>
-                                                    <button className="btn w-100 avg_session_btn text-white py-2">View Details >></button>
-                                                </div>
-                                                <div className="col-md-6 col-sm-12 col-xs-12">
-                                                    <div className="avg_session_chart float-end">
-                                                        <div className="dropdown ms-auto">
-                                                            <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Last 7 Days
-                                                            </button>
-                                                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                <li><Link to="/" className="dropdown-item">Last 28 Days</Link></li>
-                                                                <li><Link to="/" className="dropdown-item">Last Month</Link></li>
-                                                                <li><Link to="/" className="dropdown-item">Last Year</Link></li>
-                                                                <div className="vs-dropdown--menu--after" style={{top: '-1px'}}></div>
-                                                            </ul>
-                                                        </div>
-                                                        <Chart className="rounded-bottom" options={avgOptions} series={avgSessions} type="bar" width={'100%'} height={'200px'}/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr/>
-                                            <div className="row progress_bar_area">
-                                                <div className="col-md-6 col-sm-12 col-xs-12 mb-2">
-                                                    <p className="p-responsive mb-0">Goal: $100000</p>
-                                                    <div className="progress progress_bar_purple">
-                                                        <div className="progress-bar rounded" role="progressbar" style={{width: '50%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-sm-12 col-xs-12  mb-2">
-                                                    <p className="p-responsive mb-0">Goal: $100000</p>
-                                                    <div className="progress progress_bar_yellow">
-                                                        <div className="progress-bar rounded" role="progressbar" style={{width: '60%'}} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-sm-12 col-xs-12  mb-2">
-                                                    <p className="p-responsive mb-0">Goal: $100000</p>
-                                                    <div className="progress progress_bar_red">
-                                                        <div className="progress-bar rounded" role="progressbar" style={{width: '70%'}} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-sm-12 col-xs-12  mb-2">
-                                                    <p className="p-responsive mb-0">Goal: $100000</p>
-                                                    <div className="progress progress_bar_green">
-                                                        <div className="progress-bar rounded" role="progressbar" style={{width: '90%'}} aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <AvgSessionsBlock />
                                     <div className="col-md-6 col-sm-12 col-xs-12 mb-4">
                                         <div className="support_tracker rounded p-4">
                                             <div className="row support_tracker_top d-flex justify-content-between">
@@ -794,12 +556,7 @@ const Analytics = () => {
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <footer className="row user_edit_footer">
-                                    <div className="col-md-12">
-                                        <p><span>COPYRIGHT ©</span><span>2021 </span><Link className="text-decoration-none text-purple" to="https://1.envato.market/vuexy_admin" target="_blank" rel="nofollow">Pixinvent</Link><span class="hidden sm:inline-block">, All rights Reserved</span></p>
-                                    </div>
-                                 </footer>
+                                <Footer />
                             </div>
                         </div>
                     </div>

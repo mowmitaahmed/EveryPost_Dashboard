@@ -52,10 +52,10 @@
                         cursor: pointer;
                         -webkit-transition: none;
                         border-radius: 4px;
-                        padding: 10px 75px 10px 20px;
+                        padding: 10px 75px 10px 10px;
                     }
                     a:hover{
-                        padding: 10px 70px 10px 25px;
+                        padding: 10px 70px 10px 15px;
                     }
                     a.active{
                         background: linear-gradient(118deg,rgba(115, 103, 240,1),rgba(115, 103, 240,.7));

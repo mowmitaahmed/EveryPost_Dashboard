@@ -3,9 +3,18 @@ import '../../styels/UserView.scss';
 import Header from '../Shared/Header/Header';
 import Sidebar from '../Shared/Sidebar/Sidebar';
 import View from '../../images/view1.jpg';
+import RightArrows from '../../images/chevrons-right.svg';
+import Settings from '../../images/settings.svg';
+import PurpleHome from '../../images/PurpleHome.svg';
 import { Link } from 'react-router-dom';
+import Footer from '../Shared/Footer/Footer';
+import Breadcumbs from '../Shared/Breadcumbs';
 
 const UserView = () => {
+    const breadcumbs = {
+        title: 'User View',
+        page: 'User'
+    }
     return (
         <section>
             <div className="container-fluid">
@@ -17,6 +26,7 @@ const UserView = () => {
                         <Header />
                         <div className="content_area">
                             <div className="container">
+                                <Breadcumbs breadcumb={breadcumbs} />  
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="user_view_top bg-navy rounded px-4 py-4">
@@ -188,11 +198,7 @@ const UserView = () => {
                                         </div>
                                     </div>
                                 </div>
-                                 <footer className="row user_edit_footer pt-3">
-                                    <div className="col-md-12">
-                                        <p><span>COPYRIGHT ©</span><span>2021 </span><Link className="text-decoration-none text-purple" to="https://1.envato.market/vuexy_admin" target="_blank" rel="nofollow">Pixinvent</Link><span class="hidden sm:inline-block">, All rights Reserved</span></p>
-                                    </div>
-                                 </footer>
+                                <Footer />
                             </div>
                         </div>
                     </div>
