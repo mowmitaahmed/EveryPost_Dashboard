@@ -10,6 +10,7 @@ import Login from './Components/Shared/Login/Login';
 import Analytics from './Components/Analytics/Analytics';
 import UserEdit from './Components/User/UserEdit';
 import UserView from './Components/User/UserView';
+import Calendar from "./Components/Calendar/Calendar";
 
 function App() {
   return (
@@ -27,9 +28,13 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/calendar">
+            <Calendar />
+          </Route>
           <Route path="*">
             <Error1 />
           </Route>
+
       </Switch>
     </Router>
   );

@@ -20,7 +20,7 @@ const Sidebar = () => {
                 <ul className="list-unstyled">
                     <li className="py-2"><NavLink to="/" className="text-decoration-none"><img className="me-2" src={Mail} alt={Mail} />Email</NavLink></li>
                     <li className="py-2"><NavLink to="/" className="text-decoration-none"><img className="me-2" src={Chat} alt={Chat} />Chat</NavLink></li>
-                    <li className="py-2 mb-1"><NavLink to="/" className="text-decoration-none"><img className="me-2" src={Calendar} alt={Calendar} />Calendar</NavLink></li>
+                    <li className="py-2 mb-1"><NavLink to="/calendar" className="text-decoration-none"><img className="me-2" src={Calendar} alt={Calendar} />Calendar</NavLink></li>
                     <li className="user_list"><NavLink to="/" className="text-decoration-none px-2 py-2 rounded"><img className="me-2" src={User} alt={User} />User <img className="ms-5" src={Right} alt={Right}/></NavLink>
                     <ul className="list-unstyled mt-3 dropdown-container">
                         <li className="py-2 mb-1"><NavLink to="/" className="text-decoration-none" ><img className="me-2" src={Circle} alt={Circle} />List</NavLink></li>
