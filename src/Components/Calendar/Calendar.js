@@ -5,6 +5,9 @@ import Header from "../Shared/Header/Header";
 import Sidebar from "../Shared/Sidebar/Sidebar";
 import { Link, NavLink } from "react-router-dom";
 import "./Calender.scss";
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+
 
 const Calendar = () => {
 
@@ -96,12 +99,21 @@ const Calendar = () => {
                      </div>
                   <div className="col-md-9">
                     <FullCalendar
-                      plugins={[dayGridPlugin]}
+                      plugins={[dayGridPlugin, timeGridPlugin, listPlugin]}
                       initialView="dayGridMonth"
                       headerToolbar={{
                         left: "prev,next today",
                         center: "title",
-                        right: "dayGridMonth,dayGridWeek,dayGridDay"
+                        right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
+                      }}
+                      buttonText={{
+                      
+                          today:    'today',
+                          month:    'month',
+                          week:     'week',
+                          day:      'day',
+                          list: 'list'
+                        
                       }}
                     />
                   </div>

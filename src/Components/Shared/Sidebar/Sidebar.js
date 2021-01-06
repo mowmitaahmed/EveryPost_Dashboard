@@ -20,23 +20,15 @@ const Sidebar = () => {
                 <ul className="list-unstyled">
                     <li className="py-2"><NavLink to="/" className="text-decoration-none"><img className="me-2" src={Mail} alt={Mail} />Email</NavLink></li>
                     <li className="py-2"><NavLink to="/" className="text-decoration-none"><img className="me-2" src={Chat} alt={Chat} />Chat</NavLink></li>
-<<<<<<< HEAD
                     <li className="py-2 mb-1"><NavLink to="/calendar" className="text-decoration-none"><img className="me-2" src={Calendar} alt={Calendar} />Calendar</NavLink></li>
-                    <li className="user_list"><NavLink to="/" className="text-decoration-none px-2 py-2 rounded"><img className="me-2" src={User} alt={User} />User <img className="ms-5" src={Right} alt={Right}/></NavLink>
-                    <ul className="list-unstyled mt-3 dropdown-container">
-                        <li className="py-2 mb-1"><NavLink to="/" className="text-decoration-none" ><img className="me-2" src={Circle} alt={Circle} />List</NavLink></li>
-                        <li className="py-2 mb-1"><NavLink to="/userview" className="text-decoration-none" ><img className="me-2" src={Circle} alt={Circle} />View</NavLink></li>
-                        <li className="py-2"><NavLink to="/useredit" className="text-decoration-none w-100" ><img className="me-2" src={Circle} alt={Circle} />Edit</NavLink></li>
-=======
-                    <li className="py-2 mb-1"><NavLink to="/" className="text-decoration-none"><img className="me-2" src={Calendar} alt={Calendar} />Calendar</NavLink></li>
                     <li className="user_list"><NavLink to="/" className="text-decoration-none px-2 py-2 rounded"><img className="me-2" src={User} alt={User} />User <img className="ms-4" src={Right} alt={Right}/></NavLink>
                     <ul className="list-unstyled mt-2 dropdown-container">
                         <li className="py-1"><NavLink to="/" className="text-decoration-none" ><img className="me-2" src={Circle} alt={Circle} />List</NavLink></li>
                         <li className="py-1"><NavLink to="/userview" className="text-decoration-none" ><img className="me-2" src={Circle} alt={Circle} />View</NavLink></li>
                         <li className="py-1"><NavLink to="/useredit" className="text-decoration-none w-100" ><img className="me-2" src={Circle} alt={Circle} />Edit</NavLink></li>
->>>>>>> 71ca29eba976f0f046ee3db460403cc8f1cda058
                     </ul>
-                </li>
+                    </li>
+                
                 </ul>
                 <h2 className="h2-responsive px-2">UI ELEMENTS</h2>
                 <ul className="list-unstyled">
