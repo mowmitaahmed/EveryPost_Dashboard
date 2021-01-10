@@ -11,8 +11,11 @@
     text-decoration: none;
 }
 
-.add-event{
-    a{   
+.fc-day-today{
+   background-color: var(--fc-today-bg-color,rgba(115, 103, 240,1)) !important;
+}
+
+.add-event-btn, .add-btn {   
         -webkit-transition: all .25s ease;
         transition: all .25s ease;
         margin-left: 30px;
@@ -23,20 +26,15 @@
         color: $light_gray;
         font-weight: 400;
         border-radius: 4px;
-        
-    }
-    a:hover{
-        box-shadow: 0 0 10px 1px rgba(115, 103, 240,.7);
-    }
-    a.active{
         background: linear-gradient(118deg,rgba(115, 103, 240,1),rgba(115, 103, 240,.7));
         
     }
-    /* }
-    a:hover{
-        padding: 10px 25px;
-    } */
-}
+.add-event-btn:hover, .add-btn:hover{
+        box-shadow: 0 0 10px 1px rgba(115, 103, 240,.7);
+    }
+
+
+// }
 
 .form-check-input[type=checkbox] {
     border-radius: .1em;
@@ -75,5 +73,20 @@
         padding: 3px 0px;
     }
 }
+
+
+.add-event-form{
+    padding: 20px 20px;
+    .lable{
+        padding-top: 20px;
+    }
+    input[type=text],input[type=date], input[type=url]{
+        display: block;
+        min-width: 300px;
+      }
+}
+
+
+
 
 
